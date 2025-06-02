@@ -106,11 +106,18 @@
   <section>
     <h3>🌌 Qualitative Examples in AURORA</h3>
     <img src="figures/qualitative-example.png" alt="Qualitative Examples from AURORA" />
+    <p>
+        We present qualitative examples from AURORA-BENCH. We observe several common failure modes in image editing models. First, they sometimes fail to preserve the scene from the source observation (e.g., PixInstruct on Action-Genome and MagicBrush). Second, some models generate near-identical copies of the source as the target (e.g., GoT on Something- Something). Third, producing realistic outputs remains difficult, as seen in GoT’s result on Kubric. Finally, maintaining object consistency is also a challenge—SmartEdit alters the object in WhatsUp, and CWM does so in Something-Something. Despite the challenges, we also observe several positive editing behaviours from CWM. On Action- Genome, CWM correctly predicts spatial changes, such as opening and closing a drawer, which requires a strong understanding of the spatial concepts. In Something-Something, it is the only model to accurately capture the spatial concept of “falling down.” On Kubric, it demonstrates basic counting ability by correctly adding one keyboard. In WhatsUp, CWM correctly grounds the action to the laptop, while other models mistakenly edit the monitor.
+    </p>
   </section>
 
   <section>
     <h3>🏞️ Real-World Qualitative Examples</h3>
     <img src="figures/real-world-qualitative-example.png" alt="Real World Example 1" />
+
+    <p>
+        We present a real-world example demonstrating that CWM’s predicted observations can be guided through language expressing actions. CWM is also capable of iteratively generating future observations in multiple steps while maintaining consistency with previous frames.
+    </p>
   </section>
 
   <section>
