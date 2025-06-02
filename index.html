@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bootstrapping World Model</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: white;
+      background-color: #000;
+    }
+    header {
+      background: url('your-northern-lights-background.jpg') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    h1 {
+      font-size: 5em;
+      margin: 0;
+    }
+    h2 {
+      font-size: 2em;
+      margin-top: 0.5em;
+    }
+    .buttons {
+      margin-top: 2em;
+    }
+    .buttons a {
+      text-decoration: none;
+      margin: 0 0.5em;
+      padding: 0.7em 1.5em;
+      border-radius: 10px;
+      background-color: white;
+      color: black;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .buttons a:hover {
+      background-color: #ccc;
+    }
+    section {
+      padding: 4em 2em;
+      max-width: 900px;
+      margin: auto;
+    }
+    section h3 {
+      font-size: 2em;
+      margin-bottom: 0.5em;
+    }
+    section img, section video {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-top: 1em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>World Model</h1>
+    <h2>Bootstrapping from Dynamics for Multimodal Foundation Models</h2>
+    <div class="buttons">
+      <a href="LINK_TO_PAPER" target="_blank">Paper 📜</a>
+      <a href="LINK_TO_GITHUB" target="_blank">GitHub 💻</a>
+      <a href="LINK_TO_HUGGINGFACE" target="_blank">Model 🤗</a>
+    </div>
+  </header>
+
+  <section>
+    <h3>🎞️ High-Level Overview</h3>
+    <video src="figures/vlm-world-model.gif" autoplay loop muted></video>
+  </section>
+
+  <section>
+    <h3>📄 Abstract</h3>
+    <p>
+      We propose a method for bootstrapping a world model from a dynamics model to scale up multimodal foundation models efficiently. This approach enhances the model's reasoning ability, improves generalization across modalities, and reduces the need for extensive supervised data.
+    </p>
+  </section>
+
+  <section>
+    <h3>🌌 Qualitative Examples in AURORA</h3>
+    <img src="figures/qualitative-example.png" alt="Qualitative Examples from AURORA" />
+  </section>
+
+  <section>
+    <h3>🏞️ Real-World Qualitative Examples</h3>
+    <img src="figures/real-world-qualitative-example.png" alt="Real World Example 1" />
+  </section>
+
+  <section>
+    <h3>⚠️ Limitations</h3>
+    <p>
+      Despite strong performance, our model exhibits limitations in highly occluded scenes, long-horizon temporal reasoning, and robustness to distribution shifts. These areas represent key directions for future work.
+    </p>
+  </section>
+</body>
+</html>
