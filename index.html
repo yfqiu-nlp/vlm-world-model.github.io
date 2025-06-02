@@ -4,12 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bootstrapping World Model</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      color: white;
-      background-color: #000;
+      font-family: 'Inter', sans-serif;
+      color: #eaeaea;
+      background-color: #121212;
+      line-height: 1.6;
     }
     header {
       background: url('your-northern-lights-background.jpg') no-repeat center center/cover;
@@ -19,14 +21,18 @@
       justify-content: center;
       align-items: center;
       text-align: center;
+      color: white;
+      padding: 0 1em;
     }
     h1 {
-      font-size: 5em;
+      font-size: 4.5em;
+      font-weight: 800;
       margin: 0;
     }
     h2 {
-      font-size: 2em;
-      margin-top: 0.5em;
+      font-size: 1.5em;
+      font-weight: 400;
+      margin-top: 1em;
     }
     .buttons {
       margin-top: 2em;
@@ -34,36 +40,46 @@
     .buttons a {
       text-decoration: none;
       margin: 0 0.5em;
-      padding: 0.7em 1.5em;
-      border-radius: 10px;
-      background-color: white;
-      color: black;
-      font-weight: bold;
-      transition: 0.3s;
+      padding: 0.75em 1.5em;
+      border-radius: 8px;
+      background-color: #1f1f1f;
+      color: #eaeaea;
+      border: 1px solid #444;
+      font-weight: 600;
+      transition: background 0.3s, transform 0.3s;
     }
     .buttons a:hover {
-      background-color: #ccc;
+      background-color: #2e2e2e;
+      transform: scale(1.05);
     }
     section {
-      padding: 4em 2em;
+      padding: 4em 1em;
       max-width: 900px;
       margin: auto;
     }
     section h3 {
       font-size: 2em;
-      margin-bottom: 0.5em;
+      font-weight: 600;
+      border-bottom: 1px solid #333;
+      padding-bottom: 0.3em;
+      margin-bottom: 1em;
+    }
+    section p {
+      font-size: 1.1em;
+      color: #cccccc;
     }
     section img, section video {
       max-width: 100%;
-      border-radius: 10px;
-      margin-top: 1em;
+      border-radius: 12px;
+      margin-top: 1.5em;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
     }
   </style>
 </head>
 <body>
   <header>
-    <!-- <h1>World Model</h1> -->
-    <h2>Bootstrapping World Models from Dynamics Models in Multimodal Foundation Models</h2>
+    <h1>Bootstrapping World Models</h1>
+    <h2>from Dynamics Models in Multimodal Foundation Models</h2>
     <div class="buttons">
       <a href="LINK_TO_PAPER" target="_blank">Paper 📜</a>
       <a href="https://github.com/yfqiu-nlp/vlm-world-model" target="_blank">GitHub 💻</a>
@@ -79,7 +95,7 @@
   <section>
     <h3>📄 Abstract</h3>
     <p>
-      We propose a method for bootstrapping a world model from a dynamics model to scale up multimodal foundation models efficiently. This approach enhances the model's reasoning ability, improves generalization across modalities, and reduces the need for extensive supervised data.
+      To what extent do vision-and-language foundation models possess a realistic world model (observation × action → observation) and a dynamics model (observation × observation → action), when actions are expressed through language? While open-source foundation models struggle with both, we find that fine-tuning them to acquire a dynamics model through supervision is significantly easier than acquiring a world model. In turn, dynamics models can be used to bootstrap world models through two main strategies: 1) weakly supervised learning from synthetic data and 2) inference time verification. Firstly, the dynamics model can annotate actions for unlabelled pairs of video frame observations to expand the training data. We further propose a loss-weighting mechanism for the image tokens weighted by the its importance predicted by a recognition model. Secondly, the dynamics models can assign rewards to multiple samples of the world model to score them, effectively guiding search at inference time. We evaluate the world models resulting from both strategies through the task of action-centric image editing on AURORA-BENCH. Our best model achieves a performance competitive with state-of-the-art image editing models, improving on them by a margin of 15% on real-world subsets according to GPT4o-as-judge, and achieving the best average human evaluation across all subsets of AURORA-BENCH.
     </p>
   </section>
 
