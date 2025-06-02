@@ -89,7 +89,7 @@
 
   <section>
     <h3>🎞️ High-Level Overview</h3>
-    <video src="figures/vlm-world-model.gif" autoplay loop muted></video>
+    <img src="./figures/vlm-world-model.gif" alt="VLM World Model Demo" style="max-width:100%;">
   </section>
 
   <section>
@@ -112,7 +112,11 @@
   <section>
     <h3>⚠️ Limitations</h3>
     <p>
-      Despite strong performance, our model exhibits limitations in highly occluded scenes, long-horizon temporal reasoning, and robustness to distribution shifts. These areas represent key directions for future work.
+      While our approach demonstrates the effectiveness of our approaches across AURORA-BENCH, the authors would like to highlight few limitations we have discovered:
+      • Despite efforts to guide the model via supervised fine-tuning with loss weighting or inference-time verification (Table 2), we observe that the model may still resort to copying the source observation, especially under low sampling temperatures or ambiguous instructions.
+      • While we show preliminary results of language-steered observation prediction, fine-grained control remains limited, and understanding subtle instructions (e.g., spatial or quantitative edits) remains challenging.
+      • We observe variance across different runs of experiments, likely due to the sensitivity of sampling for generation in multimodal models. To address this, we report results averaged over multiple runs and include performance under the best-of-N sampling distribution during inference for a robust comparison.
+      • We mostly conduct experiments using the native and unified VLM, Chameleon, as it is currently the only open-source VLM that supports interleaved image-text generation by default. This choice allows for fair and consistent benchmarking across our tasks. Moreover, Chameleon has demonstrated competitive performance in our settings. For example, its results are comparable to VILA-U in our dynamics prediction task. Future work should explore the generalisation to other multimodal foundation models with stronger capabilities.
     </p>
   </section>
 </body>
